@@ -25,7 +25,7 @@ import json
 import re
 from pathlib import Path
 
-WORD_BOOKS = ["sisutan", "target1900", "sokutan_hisshu", "leap_basic", "passtan_jun1kyu"]
+WORD_BOOKS = ["sisutan", "target1900", "sokutan_hisshu", "leap_basic", "passtan_jun1kyu", "sparta3"]
 PHRASE_BOOKS = ["sokujukugo"]
 
 

@@ -1,0 +1,4150 @@
+{
+  "families": [
+    {
+      "root": "abrupt",
+      "members": [
+        {
+          "lemma": "abruptly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "absolute",
+      "members": [
+        {
+          "lemma": "absolutely",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "accept",
+      "members": [
+        {
+          "lemma": "acceptable",
+          "suffix": "able"
+        },
+        {
+          "lemma": "acceptance",
+          "suffix": "ance"
+        }
+      ]
+    },
+    {
+      "root": "access",
+      "members": [
+        {
+          "lemma": "accessible",
+          "suffix": "ible"
+        }
+      ]
+    },
+    {
+      "root": "accidental",
+      "members": [
+        {
+          "lemma": "accidentally",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "accord",
+      "members": [
+        {
+          "lemma": "accordance",
+          "suffix": "ance"
+        }
+      ]
+    },
+    {
+      "root": "acquaint",
+      "members": [
+        {
+          "lemma": "acquaintance",
+          "suffix": "ance"
+        }
+      ]
+    },
+    {
+      "root": "actual",
+      "members": [
+        {
+          "lemma": "actually",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "add",
+      "members": [
+        {
+          "lemma": "addition",
+          "suffix": "ition"
+        }
+      ]
+    },
+    {
+      "root": "adhere",
+      "members": [
+        {
+          "lemma": "adherence",
+          "suffix": "ence"
+        }
+      ]
+    },
+    {
+      "root": "admire",
+      "members": [
+        {
+          "lemma": "admirable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "affirm",
+      "members": [
+        {
+          "lemma": "affirmation",
+          "suffix": "ation"
+        }
+      ]
+    },
+    {
+      "root": "afford",
+      "members": [
+        {
+          "lemma": "affordable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "alien",
+      "members": [
+        {
+          "lemma": "alienation",
+          "suffix": "ation"
+        }
+      ]
+    },
+    {
+      "root": "align",
+      "members": [
+        {
+          "lemma": "alignment",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "allege",
+      "members": [
+        {
+          "lemma": "allegation",
+          "suffix": "ation"
+        }
+      ]
+    },
+    {
+      "root": "allow",
+      "members": [
+        {
+          "lemma": "allowance",
+          "suffix": "ance"
+        }
+      ]
+    },
+    {
+      "root": "alternate",
+      "members": [
+        {
+          "lemma": "alternative",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "amend",
+      "members": [
+        {
+          "lemma": "amendment",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "amuse",
+      "members": [
+        {
+          "lemma": "amusement",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "apparent",
+      "members": [
+        {
+          "lemma": "apparently",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "appear",
+      "members": [
+        {
+          "lemma": "appearance",
+          "suffix": "ance"
+        }
+      ]
+    },
+    {
+      "root": "app",
+      "members": [
+        {
+          "lemma": "apply",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "appoint",
+      "members": [
+        {
+          "lemma": "appointment",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "approximate",
+      "members": [
+        {
+          "lemma": "approximately",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "arrange",
+      "members": [
+        {
+          "lemma": "arrangement",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "aspire",
+      "members": [
+        {
+          "lemma": "aspiration",
+          "suffix": "ation"
+        }
+      ]
+    },
+    {
+      "root": "assign",
+      "members": [
+        {
+          "lemma": "assignment",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "assist",
+      "members": [
+        {
+          "lemma": "assistance",
+          "suffix": "ance"
+        }
+      ]
+    },
+    {
+      "root": "attach",
+      "members": [
+        {
+          "lemma": "attachment",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "attend",
+      "members": [
+        {
+          "lemma": "attendance",
+          "suffix": "ance"
+        }
+      ]
+    },
+    {
+      "root": "attract",
+      "members": [
+        {
+          "lemma": "attractive",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "author",
+      "members": [
+        {
+          "lemma": "authority",
+          "suffix": "ity"
+        }
+      ]
+    },
+    {
+      "root": "avail",
+      "members": [
+        {
+          "lemma": "available",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "avoid",
+      "members": [
+        {
+          "lemma": "avoidance",
+          "suffix": "ance"
+        }
+      ]
+    },
+    {
+      "root": "aware",
+      "members": [
+        {
+          "lemma": "awareness",
+          "suffix": "ness"
+        }
+      ]
+    },
+    {
+      "root": "bare",
+      "members": [
+        {
+          "lemma": "barely",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "base",
+      "members": [
+        {
+          "lemma": "basement",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "bear",
+      "members": [
+        {
+          "lemma": "bearable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "brief",
+      "members": [
+        {
+          "lemma": "briefly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "calm",
+      "members": [
+        {
+          "lemma": "calmly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "care",
+      "members": [
+        {
+          "lemma": "career",
+          "suffix": "er"
+        },
+        {
+          "lemma": "careful",
+          "suffix": "ful"
+        }
+      ]
+    },
+    {
+      "root": "careful",
+      "members": [
+        {
+          "lemma": "carefully",
+          "suffix": "fully"
+        }
+      ]
+    },
+    {
+      "root": "central",
+      "members": [
+        {
+          "lemma": "centralize",
+          "suffix": "ize"
+        }
+      ]
+    },
+    {
+      "root": "clear",
+      "members": [
+        {
+          "lemma": "clearly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "close",
+      "members": [
+        {
+          "lemma": "closely",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "coal",
+      "members": [
+        {
+          "lemma": "coalition",
+          "suffix": "ition"
+        }
+      ]
+    },
+    {
+      "root": "coincide",
+      "members": [
+        {
+          "lemma": "coincidence",
+          "suffix": "ence"
+        }
+      ]
+    },
+    {
+      "root": "collect",
+      "members": [
+        {
+          "lemma": "collective",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "comfort",
+      "members": [
+        {
+          "lemma": "comfortable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "commend",
+      "members": [
+        {
+          "lemma": "commendable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "compare",
+      "members": [
+        {
+          "lemma": "comparable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "compete",
+      "members": [
+        {
+          "lemma": "competence",
+          "suffix": "ence"
+        },
+        {
+          "lemma": "competition",
+          "suffix": "ition"
+        }
+      ]
+    },
+    {
+      "root": "complete",
+      "members": [
+        {
+          "lemma": "completely",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "conceive",
+      "members": [
+        {
+          "lemma": "conceivable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "confer",
+      "members": [
+        {
+          "lemma": "conference",
+          "suffix": "ence"
+        }
+      ]
+    },
+    {
+      "root": "consider",
+      "members": [
+        {
+          "lemma": "considerable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "constant",
+      "members": [
+        {
+          "lemma": "constantly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "converse",
+      "members": [
+        {
+          "lemma": "conversation",
+          "suffix": "ation"
+        },
+        {
+          "lemma": "conversely",
+          "suffix": "ly"
+        },
+        {
+          "lemma": "conversion",
+          "suffix": "sion"
+        }
+      ]
+    },
+    {
+      "root": "coordinate",
+      "members": [
+        {
+          "lemma": "coordinator",
+          "suffix": "or"
+        }
+      ]
+    },
+    {
+      "root": "correspond",
+      "members": [
+        {
+          "lemma": "correspondence",
+          "suffix": "ence"
+        }
+      ]
+    },
+    {
+      "root": "cost",
+      "members": [
+        {
+          "lemma": "costly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "courage",
+      "members": [
+        {
+          "lemma": "courageous",
+          "suffix": "ous"
+        }
+      ]
+    },
+    {
+      "root": "critical",
+      "members": [
+        {
+          "lemma": "critically",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "critic",
+      "members": [
+        {
+          "lemma": "criticize",
+          "suffix": "ize"
+        }
+      ]
+    },
+    {
+      "root": "curious",
+      "members": [
+        {
+          "lemma": "curiously",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "current",
+      "members": [
+        {
+          "lemma": "currently",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "custom",
+      "members": [
+        {
+          "lemma": "customer",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "danger",
+      "members": [
+        {
+          "lemma": "dangerous",
+          "suffix": "ous"
+        }
+      ]
+    },
+    {
+      "root": "decade",
+      "members": [
+        {
+          "lemma": "decadence",
+          "suffix": "ence"
+        }
+      ]
+    },
+    {
+      "root": "definite",
+      "members": [
+        {
+          "lemma": "definitely",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "define",
+      "members": [
+        {
+          "lemma": "definition",
+          "suffix": "ition"
+        }
+      ]
+    },
+    {
+      "root": "deliberate",
+      "members": [
+        {
+          "lemma": "deliberately",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "dense",
+      "members": [
+        {
+          "lemma": "density",
+          "suffix": "ity"
+        }
+      ]
+    },
+    {
+      "root": "depart",
+      "members": [
+        {
+          "lemma": "department",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "deport",
+      "members": [
+        {
+          "lemma": "deportation",
+          "suffix": "ation"
+        }
+      ]
+    },
+    {
+      "root": "desire",
+      "members": [
+        {
+          "lemma": "desirable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "detect",
+      "members": [
+        {
+          "lemma": "detective",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "develop",
+      "members": [
+        {
+          "lemma": "developer",
+          "suffix": "er"
+        },
+        {
+          "lemma": "development",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "dictate",
+      "members": [
+        {
+          "lemma": "dictator",
+          "suffix": "or"
+        }
+      ]
+    },
+    {
+      "root": "digest",
+      "members": [
+        {
+          "lemma": "digestive",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "direct",
+      "members": [
+        {
+          "lemma": "directly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "diverse",
+      "members": [
+        {
+          "lemma": "diversity",
+          "suffix": "ity"
+        }
+      ]
+    },
+    {
+      "root": "divide",
+      "members": [
+        {
+          "lemma": "division",
+          "suffix": "sion"
+        }
+      ]
+    },
+    {
+      "root": "doubt",
+      "members": [
+        {
+          "lemma": "doubtful",
+          "suffix": "ful"
+        }
+      ]
+    },
+    {
+      "root": "dwell",
+      "members": [
+        {
+          "lemma": "dweller",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "edit",
+      "members": [
+        {
+          "lemma": "editor",
+          "suffix": "or"
+        }
+      ]
+    },
+    {
+      "root": "educate",
+      "members": [
+        {
+          "lemma": "educator",
+          "suffix": "or"
+        }
+      ]
+    },
+    {
+      "root": "effect",
+      "members": [
+        {
+          "lemma": "effective",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "effective",
+      "members": [
+        {
+          "lemma": "effectively",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "electric",
+      "members": [
+        {
+          "lemma": "electricity",
+          "suffix": "ity"
+        }
+      ]
+    },
+    {
+      "root": "employ",
+      "members": [
+        {
+          "lemma": "employment",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "engage",
+      "members": [
+        {
+          "lemma": "engagement",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "enjoy",
+      "members": [
+        {
+          "lemma": "enjoyment",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "enlighten",
+      "members": [
+        {
+          "lemma": "enlightenment",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "entire",
+      "members": [
+        {
+          "lemma": "entirely",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "equal",
+      "members": [
+        {
+          "lemma": "equality",
+          "suffix": "ity"
+        },
+        {
+          "lemma": "equalize",
+          "suffix": "ize"
+        }
+      ]
+    },
+    {
+      "root": "equip",
+      "members": [
+        {
+          "lemma": "equipment",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "erode",
+      "members": [
+        {
+          "lemma": "erosion",
+          "suffix": "sion"
+        }
+      ]
+    },
+    {
+      "root": "essential",
+      "members": [
+        {
+          "lemma": "essentially",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "establish",
+      "members": [
+        {
+          "lemma": "establishment",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "ethnic",
+      "members": [
+        {
+          "lemma": "ethnicity",
+          "suffix": "ity"
+        }
+      ]
+    },
+    {
+      "root": "event",
+      "members": [
+        {
+          "lemma": "eventful",
+          "suffix": "ful"
+        }
+      ]
+    },
+    {
+      "root": "exact",
+      "members": [
+        {
+          "lemma": "exactly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "exceptional",
+      "members": [
+        {
+          "lemma": "exceptionally",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "excess",
+      "members": [
+        {
+          "lemma": "excessive",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "exclusive",
+      "members": [
+        {
+          "lemma": "exclusively",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "execute",
+      "members": [
+        {
+          "lemma": "executive",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "exist",
+      "members": [
+        {
+          "lemma": "existence",
+          "suffix": "ence"
+        }
+      ]
+    },
+    {
+      "root": "expense",
+      "members": [
+        {
+          "lemma": "expensive",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "explore",
+      "members": [
+        {
+          "lemma": "exploration",
+          "suffix": "ation"
+        }
+      ]
+    },
+    {
+      "root": "explode",
+      "members": [
+        {
+          "lemma": "explosion",
+          "suffix": "sion"
+        }
+      ]
+    },
+    {
+      "root": "extreme",
+      "members": [
+        {
+          "lemma": "extremely",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "fact",
+      "members": [
+        {
+          "lemma": "factor",
+          "suffix": "or"
+        }
+      ]
+    },
+    {
+      "root": "factual",
+      "members": [
+        {
+          "lemma": "factually",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "fair",
+      "members": [
+        {
+          "lemma": "fairly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "faith",
+      "members": [
+        {
+          "lemma": "faithful",
+          "suffix": "ful"
+        }
+      ]
+    },
+    {
+      "root": "fame",
+      "members": [
+        {
+          "lemma": "famous",
+          "suffix": "ous"
+        }
+      ]
+    },
+    {
+      "root": "fashion",
+      "members": [
+        {
+          "lemma": "fashionable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "favor",
+      "members": [
+        {
+          "lemma": "favorable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "foreign",
+      "members": [
+        {
+          "lemma": "foreigner",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "forge",
+      "members": [
+        {
+          "lemma": "forgive",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "form",
+      "members": [
+        {
+          "lemma": "formation",
+          "suffix": "ation"
+        },
+        {
+          "lemma": "former",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "found",
+      "members": [
+        {
+          "lemma": "foundation",
+          "suffix": "ation"
+        },
+        {
+          "lemma": "founder",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "frank",
+      "members": [
+        {
+          "lemma": "frankly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "frequent",
+      "members": [
+        {
+          "lemma": "frequently",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "general",
+      "members": [
+        {
+          "lemma": "generally",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "govern",
+      "members": [
+        {
+          "lemma": "government",
+          "suffix": "ment"
+        },
+        {
+          "lemma": "governor",
+          "suffix": "or"
+        }
+      ]
+    },
+    {
+      "root": "gradual",
+      "members": [
+        {
+          "lemma": "gradually",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "grave",
+      "members": [
+        {
+          "lemma": "gravity",
+          "suffix": "ity"
+        }
+      ]
+    },
+    {
+      "root": "guide",
+      "members": [
+        {
+          "lemma": "guidance",
+          "suffix": "ance"
+        }
+      ]
+    },
+    {
+      "root": "habit",
+      "members": [
+        {
+          "lemma": "habitable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "harass",
+      "members": [
+        {
+          "lemma": "harassment",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "help",
+      "members": [
+        {
+          "lemma": "helpful",
+          "suffix": "ful"
+        }
+      ]
+    },
+    {
+      "root": "humane",
+      "members": [
+        {
+          "lemma": "humanity",
+          "suffix": "ity"
+        }
+      ]
+    },
+    {
+      "root": "humid",
+      "members": [
+        {
+          "lemma": "humidity",
+          "suffix": "ity"
+        }
+      ]
+    },
+    {
+      "root": "immediate",
+      "members": [
+        {
+          "lemma": "immediately",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "immerse",
+      "members": [
+        {
+          "lemma": "immersion",
+          "suffix": "sion"
+        }
+      ]
+    },
+    {
+      "root": "import",
+      "members": [
+        {
+          "lemma": "importance",
+          "suffix": "ance"
+        }
+      ]
+    },
+    {
+      "root": "important",
+      "members": [
+        {
+          "lemma": "importantly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "impose",
+      "members": [
+        {
+          "lemma": "imposition",
+          "suffix": "ition"
+        }
+      ]
+    },
+    {
+      "root": "impress",
+      "members": [
+        {
+          "lemma": "impressive",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "incline",
+      "members": [
+        {
+          "lemma": "inclination",
+          "suffix": "ation"
+        }
+      ]
+    },
+    {
+      "root": "include",
+      "members": [
+        {
+          "lemma": "inclusion",
+          "suffix": "sion"
+        }
+      ]
+    },
+    {
+      "root": "inform",
+      "members": [
+        {
+          "lemma": "information",
+          "suffix": "ation"
+        }
+      ]
+    },
+    {
+      "root": "inherit",
+      "members": [
+        {
+          "lemma": "inheritance",
+          "suffix": "ance"
+        }
+      ]
+    },
+    {
+      "root": "initiate",
+      "members": [
+        {
+          "lemma": "initiative",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "inn",
+      "members": [
+        {
+          "lemma": "inner",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "instant",
+      "members": [
+        {
+          "lemma": "instantly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "intense",
+      "members": [
+        {
+          "lemma": "intensity",
+          "suffix": "ity"
+        },
+        {
+          "lemma": "intensive",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "interfere",
+      "members": [
+        {
+          "lemma": "interference",
+          "suffix": "ence"
+        }
+      ]
+    },
+    {
+      "root": "invade",
+      "members": [
+        {
+          "lemma": "invasion",
+          "suffix": "sion"
+        }
+      ]
+    },
+    {
+      "root": "involve",
+      "members": [
+        {
+          "lemma": "involvement",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "knowledge",
+      "members": [
+        {
+          "lemma": "knowledgeable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "lab",
+      "members": [
+        {
+          "lemma": "labor",
+          "suffix": "or"
+        }
+      ]
+    },
+    {
+      "root": "late",
+      "members": [
+        {
+          "lemma": "lately",
+          "suffix": "ly"
+        },
+        {
+          "lemma": "later",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "lay",
+      "members": [
+        {
+          "lemma": "layer",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "legal",
+      "members": [
+        {
+          "lemma": "legally",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "like",
+      "members": [
+        {
+          "lemma": "likely",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "live",
+      "members": [
+        {
+          "lemma": "liver",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "major",
+      "members": [
+        {
+          "lemma": "majority",
+          "suffix": "ity"
+        }
+      ]
+    },
+    {
+      "root": "manufacture",
+      "members": [
+        {
+          "lemma": "manufacturer",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "mature",
+      "members": [
+        {
+          "lemma": "maturity",
+          "suffix": "ity"
+        }
+      ]
+    },
+    {
+      "root": "mere",
+      "members": [
+        {
+          "lemma": "merely",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "mine",
+      "members": [
+        {
+          "lemma": "minor",
+          "suffix": "or"
+        }
+      ]
+    },
+    {
+      "root": "moral",
+      "members": [
+        {
+          "lemma": "morally",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "mortal",
+      "members": [
+        {
+          "lemma": "mortality",
+          "suffix": "ity"
+        }
+      ]
+    },
+    {
+      "root": "most",
+      "members": [
+        {
+          "lemma": "mostly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "motive",
+      "members": [
+        {
+          "lemma": "motivation",
+          "suffix": "ation"
+        }
+      ]
+    },
+    {
+      "root": "move",
+      "members": [
+        {
+          "lemma": "movement",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "national",
+      "members": [
+        {
+          "lemma": "nationality",
+          "suffix": "ity"
+        }
+      ]
+    },
+    {
+      "root": "near",
+      "members": [
+        {
+          "lemma": "nearly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "negate",
+      "members": [
+        {
+          "lemma": "negative",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "nerve",
+      "members": [
+        {
+          "lemma": "nervous",
+          "suffix": "ous"
+        }
+      ]
+    },
+    {
+      "root": "note",
+      "members": [
+        {
+          "lemma": "notable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "notable",
+      "members": [
+        {
+          "lemma": "notably",
+          "suffix": "ably"
+        }
+      ]
+    },
+    {
+      "root": "notice",
+      "members": [
+        {
+          "lemma": "noticeable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "obese",
+      "members": [
+        {
+          "lemma": "obesity",
+          "suffix": "ity"
+        }
+      ]
+    },
+    {
+      "root": "object",
+      "members": [
+        {
+          "lemma": "objective",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "oblige",
+      "members": [
+        {
+          "lemma": "obligation",
+          "suffix": "ation"
+        }
+      ]
+    },
+    {
+      "root": "observe",
+      "members": [
+        {
+          "lemma": "observer",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "official",
+      "members": [
+        {
+          "lemma": "officially",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "organize",
+      "members": [
+        {
+          "lemma": "organization",
+          "suffix": "ation"
+        },
+        {
+          "lemma": "organizer",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "organ",
+      "members": [
+        {
+          "lemma": "organize",
+          "suffix": "ize"
+        }
+      ]
+    },
+    {
+      "root": "original",
+      "members": [
+        {
+          "lemma": "originality",
+          "suffix": "ity"
+        },
+        {
+          "lemma": "originally",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "own",
+      "members": [
+        {
+          "lemma": "owner",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "pain",
+      "members": [
+        {
+          "lemma": "painful",
+          "suffix": "ful"
+        }
+      ]
+    },
+    {
+      "root": "partial",
+      "members": [
+        {
+          "lemma": "partially",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "pave",
+      "members": [
+        {
+          "lemma": "pavement",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "peril",
+      "members": [
+        {
+          "lemma": "perilous",
+          "suffix": "ous"
+        }
+      ]
+    },
+    {
+      "root": "permanent",
+      "members": [
+        {
+          "lemma": "permanently",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "personal",
+      "members": [
+        {
+          "lemma": "personality",
+          "suffix": "ity"
+        }
+      ]
+    },
+    {
+      "root": "plant",
+      "members": [
+        {
+          "lemma": "plantation",
+          "suffix": "ation"
+        }
+      ]
+    },
+    {
+      "root": "political",
+      "members": [
+        {
+          "lemma": "politically",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "pose",
+      "members": [
+        {
+          "lemma": "position",
+          "suffix": "ition"
+        }
+      ]
+    },
+    {
+      "root": "possible",
+      "members": [
+        {
+          "lemma": "possibly",
+          "suffix": "ibly"
+        }
+      ]
+    },
+    {
+      "root": "precise",
+      "members": [
+        {
+          "lemma": "precisely",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "prefer",
+      "members": [
+        {
+          "lemma": "preference",
+          "suffix": "ence"
+        }
+      ]
+    },
+    {
+      "root": "prepare",
+      "members": [
+        {
+          "lemma": "preparation",
+          "suffix": "ation"
+        }
+      ]
+    },
+    {
+      "root": "previous",
+      "members": [
+        {
+          "lemma": "previously",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "prior",
+      "members": [
+        {
+          "lemma": "priority",
+          "suffix": "ity"
+        }
+      ]
+    },
+    {
+      "root": "prison",
+      "members": [
+        {
+          "lemma": "prisoner",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "profit",
+      "members": [
+        {
+          "lemma": "profitable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "prospect",
+      "members": [
+        {
+          "lemma": "prospective",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "prosper",
+      "members": [
+        {
+          "lemma": "prosperity",
+          "suffix": "ity"
+        }
+      ]
+    },
+    {
+      "root": "protect",
+      "members": [
+        {
+          "lemma": "protective",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "prove",
+      "members": [
+        {
+          "lemma": "provable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "public",
+      "members": [
+        {
+          "lemma": "publication",
+          "suffix": "ation"
+        },
+        {
+          "lemma": "publicity",
+          "suffix": "ity"
+        }
+      ]
+    },
+    {
+      "root": "quote",
+      "members": [
+        {
+          "lemma": "quotation",
+          "suffix": "ation"
+        }
+      ]
+    },
+    {
+      "root": "reason",
+      "members": [
+        {
+          "lemma": "reasonable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "recent",
+      "members": [
+        {
+          "lemma": "recently",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "regular",
+      "members": [
+        {
+          "lemma": "regularly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "relate",
+      "members": [
+        {
+          "lemma": "relative",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "remark",
+      "members": [
+        {
+          "lemma": "remarkable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "remind",
+      "members": [
+        {
+          "lemma": "reminder",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "replace",
+      "members": [
+        {
+          "lemma": "replacement",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "require",
+      "members": [
+        {
+          "lemma": "requirement",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "research",
+      "members": [
+        {
+          "lemma": "researcher",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "resist",
+      "members": [
+        {
+          "lemma": "resistence",
+          "suffix": "ence"
+        }
+      ]
+    },
+    {
+      "root": "respect",
+      "members": [
+        {
+          "lemma": "respectable",
+          "suffix": "able"
+        },
+        {
+          "lemma": "respective",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "respective",
+      "members": [
+        {
+          "lemma": "respectively",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "restore",
+      "members": [
+        {
+          "lemma": "restoration",
+          "suffix": "ation"
+        }
+      ]
+    },
+    {
+      "root": "rough",
+      "members": [
+        {
+          "lemma": "roughly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "routine",
+      "members": [
+        {
+          "lemma": "routinely",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "rule",
+      "members": [
+        {
+          "lemma": "ruler",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "sad",
+      "members": [
+        {
+          "lemma": "sadness",
+          "suffix": "ness"
+        }
+      ]
+    },
+    {
+      "root": "scarce",
+      "members": [
+        {
+          "lemma": "scarcely",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "secure",
+      "members": [
+        {
+          "lemma": "security",
+          "suffix": "ity"
+        }
+      ]
+    },
+    {
+      "root": "select",
+      "members": [
+        {
+          "lemma": "selective",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "settle",
+      "members": [
+        {
+          "lemma": "settlement",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "short",
+      "members": [
+        {
+          "lemma": "shortly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "simultaneous",
+      "members": [
+        {
+          "lemma": "simultaneously",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "slight",
+      "members": [
+        {
+          "lemma": "slightly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "spontaneous",
+      "members": [
+        {
+          "lemma": "spontaneously",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "starve",
+      "members": [
+        {
+          "lemma": "starvation",
+          "suffix": "ation"
+        }
+      ]
+    },
+    {
+      "root": "state",
+      "members": [
+        {
+          "lemma": "statement",
+          "suffix": "ment"
+        }
+      ]
+    },
+    {
+      "root": "strange",
+      "members": [
+        {
+          "lemma": "stranger",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "stress",
+      "members": [
+        {
+          "lemma": "stressful",
+          "suffix": "ful"
+        }
+      ]
+    },
+    {
+      "root": "strict",
+      "members": [
+        {
+          "lemma": "strictly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "subject",
+      "members": [
+        {
+          "lemma": "subjective",
+          "suffix": "ive"
+        }
+      ]
+    },
+    {
+      "root": "subscribe",
+      "members": [
+        {
+          "lemma": "subscriber",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "subsequent",
+      "members": [
+        {
+          "lemma": "subsequently",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "success",
+      "members": [
+        {
+          "lemma": "successor",
+          "suffix": "or"
+        }
+      ]
+    },
+    {
+      "root": "sudden",
+      "members": [
+        {
+          "lemma": "suddenly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "suffer",
+      "members": [
+        {
+          "lemma": "sufferer",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "suit",
+      "members": [
+        {
+          "lemma": "suitable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "supervise",
+      "members": [
+        {
+          "lemma": "supervisor",
+          "suffix": "or"
+        }
+      ]
+    },
+    {
+      "root": "sustain",
+      "members": [
+        {
+          "lemma": "sustainable",
+          "suffix": "able"
+        }
+      ]
+    },
+    {
+      "root": "tail",
+      "members": [
+        {
+          "lemma": "tailor",
+          "suffix": "or"
+        }
+      ]
+    },
+    {
+      "root": "tend",
+      "members": [
+        {
+          "lemma": "tender",
+          "suffix": "er"
+        }
+      ]
+    },
+    {
+      "root": "tense",
+      "members": [
+        {
+          "lemma": "tension",
+          "suffix": "sion"
+        }
+      ]
+    },
+    {
+      "root": "thorough",
+      "members": [
+        {
+          "lemma": "thoroughly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "trade",
+      "members": [
+        {
+          "lemma": "tradition",
+          "suffix": "ition"
+        }
+      ]
+    },
+    {
+      "root": "transport",
+      "members": [
+        {
+          "lemma": "transportation",
+          "suffix": "ation"
+        }
+      ]
+    },
+    {
+      "root": "typical",
+      "members": [
+        {
+          "lemma": "typically",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "unconditional",
+      "members": [
+        {
+          "lemma": "unconditionally",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "usual",
+      "members": [
+        {
+          "lemma": "usually",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "utter",
+      "members": [
+        {
+          "lemma": "utterly",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "value",
+      "members": [
+        {
+          "lemma": "valuable",
+          "suffix": "able"
+        },
+        {
+          "lemma": "valuation",
+          "suffix": "ation"
+        }
+      ]
+    },
+    {
+      "root": "verse",
+      "members": [
+        {
+          "lemma": "version",
+          "suffix": "sion"
+        }
+      ]
+    },
+    {
+      "root": "virtual",
+      "members": [
+        {
+          "lemma": "virtually",
+          "suffix": "ly"
+        }
+      ]
+    },
+    {
+      "root": "wit",
+      "members": [
+        {
+          "lemma": "witness",
+          "suffix": "ness"
+        }
+      ]
+    }
+  ],
+  "family_count": 262,
+  "derived_word_count": 279,
+  "phrase_attach_candidates": [
+    {
+      "phrase": "a couple of 〜 2，3",
+      "headword": "a"
+    },
+    {
+      "phrase": "a few",
+      "headword": "a"
+    },
+    {
+      "phrase": "a friend from",
+      "headword": "a"
+    },
+    {
+      "phrase": "a handful of",
+      "headword": "a"
+    },
+    {
+      "phrase": "a host of",
+      "headword": "a"
+    },
+    {
+      "phrase": "a little",
+      "headword": "a"
+    },
+    {
+      "phrase": "a lot of",
+      "headword": "a"
+    },
+    {
+      "phrase": "a number of",
+      "headword": "a"
+    },
+    {
+      "phrase": "a piece of＋",
+      "headword": "a"
+    },
+    {
+      "phrase": "a sheet of 〜 1",
+      "headword": "a"
+    },
+    {
+      "phrase": "abide by 〜 〜（",
+      "headword": "abide"
+    },
+    {
+      "phrase": "accept a as b a",
+      "headword": "accept"
+    },
+    {
+      "phrase": "account for",
+      "headword": "account"
+    },
+    {
+      "phrase": "accuse a of b a",
+      "headword": "accuse"
+    },
+    {
+      "phrase": "adapt to",
+      "headword": "adapt"
+    },
+    {
+      "phrase": "add a to b a",
+      "headword": "add"
+    },
+    {
+      "phrase": "add to",
+      "headword": "add"
+    },
+    {
+      "phrase": "adhere to 〜 （",
+      "headword": "adhere"
+    },
+    {
+      "phrase": "admit to 〜 〜（",
+      "headword": "admit"
+    },
+    {
+      "phrase": "advise a to",
+      "headword": "advise"
+    },
+    {
+      "phrase": "agree with 〜 〜（⼈・",
+      "headword": "agree"
+    },
+    {
+      "phrase": "aim at",
+      "headword": "aim"
+    },
+    {
+      "phrase": "all along",
+      "headword": "all"
+    },
+    {
+      "phrase": "all at once",
+      "headword": "all"
+    },
+    {
+      "phrase": "all but",
+      "headword": "all"
+    },
+    {
+      "phrase": "all in all",
+      "headword": "all"
+    },
+    {
+      "phrase": "all of a sudden",
+      "headword": "all"
+    },
+    {
+      "phrase": "all over",
+      "headword": "all"
+    },
+    {
+      "phrase": "all the time",
+      "headword": "all"
+    },
+    {
+      "phrase": "all the way",
+      "headword": "all"
+    },
+    {
+      "phrase": "all the ⽐",
+      "headword": "all"
+    },
+    {
+      "phrase": "all too",
+      "headword": "all"
+    },
+    {
+      "phrase": "all 〔just〕 the same",
+      "headword": "all"
+    },
+    {
+      "phrase": "allow for",
+      "headword": "allow"
+    },
+    {
+      "phrase": "apart from",
+      "headword": "apart"
+    },
+    {
+      "phrase": "apply for",
+      "headword": "apply"
+    },
+    {
+      "phrase": "apply to",
+      "headword": "apply"
+    },
+    {
+      "phrase": "approve of",
+      "headword": "approve"
+    },
+    {
+      "phrase": "arrive at",
+      "headword": "arrive"
+    },
+    {
+      "phrase": "ascribe a to b a",
+      "headword": "ascribe"
+    },
+    {
+      "phrase": "aside from",
+      "headword": "aside"
+    },
+    {
+      "phrase": "attach a to b a",
+      "headword": "attach"
+    },
+    {
+      "phrase": "attend to",
+      "headword": "attend"
+    },
+    {
+      "phrase": "attribute a to",
+      "headword": "attribute"
+    },
+    {
+      "phrase": "attribute a to b a",
+      "headword": "attribute"
+    },
+    {
+      "phrase": "avail oneself of 〜 〜（",
+      "headword": "avail"
+    },
+    {
+      "phrase": "beat about 〔around〕 the bush",
+      "headword": "beat"
+    },
+    {
+      "phrase": "become aware of",
+      "headword": "become"
+    },
+    {
+      "phrase": "become of",
+      "headword": "become"
+    },
+    {
+      "phrase": "believe in 〜 〜（",
+      "headword": "believe"
+    },
+    {
+      "phrase": "blame a for b b",
+      "headword": "blame"
+    },
+    {
+      "phrase": "blank slate",
+      "headword": "blank"
+    },
+    {
+      "phrase": "blast off",
+      "headword": "blast"
+    },
+    {
+      "phrase": "blow up",
+      "headword": "blow"
+    },
+    {
+      "phrase": "blow up (〜) （",
+      "headword": "blow"
+    },
+    {
+      "phrase": "boast about 〔of〕",
+      "headword": "boast"
+    },
+    {
+      "phrase": "bounce back",
+      "headword": "bounce"
+    },
+    {
+      "phrase": "branch off",
+      "headword": "branch"
+    },
+    {
+      "phrase": "break down",
+      "headword": "break"
+    },
+    {
+      "phrase": "break down (〜) 〜（⾷",
+      "headword": "break"
+    },
+    {
+      "phrase": "break in",
+      "headword": "break"
+    },
+    {
+      "phrase": "break into",
+      "headword": "break"
+    },
+    {
+      "phrase": "break off (〜)",
+      "headword": "break"
+    },
+    {
+      "phrase": "break one's promise 〔word〕",
+      "headword": "break"
+    },
+    {
+      "phrase": "break out",
+      "headword": "break"
+    },
+    {
+      "phrase": "break out （",
+      "headword": "break"
+    },
+    {
+      "phrase": "break up (〜)",
+      "headword": "break"
+    },
+    {
+      "phrase": "brush up (on) 〜 〜（",
+      "headword": "brush"
+    },
+    {
+      "phrase": "burn down (〜)",
+      "headword": "burn"
+    },
+    {
+      "phrase": "calm down (〜)",
+      "headword": "calm"
+    },
+    {
+      "phrase": "care about",
+      "headword": "care"
+    },
+    {
+      "phrase": "care facility",
+      "headword": "care"
+    },
+    {
+      "phrase": "care for",
+      "headword": "care"
+    },
+    {
+      "phrase": "carry on (〜)",
+      "headword": "carry"
+    },
+    {
+      "phrase": "carry out",
+      "headword": "carry"
+    },
+    {
+      "phrase": "catch on （to 〜) 〜（",
+      "headword": "catch"
+    },
+    {
+      "phrase": "catch sight of",
+      "headword": "catch"
+    },
+    {
+      "phrase": "catch up (with 〜) （",
+      "headword": "catch"
+    },
+    {
+      "phrase": "cheer up",
+      "headword": "cheer"
+    },
+    {
+      "phrase": "clear up",
+      "headword": "clear"
+    },
+    {
+      "phrase": "clear up 〜 〜（",
+      "headword": "clear"
+    },
+    {
+      "phrase": "cling to",
+      "headword": "cling"
+    },
+    {
+      "phrase": "coincide with",
+      "headword": "coincide"
+    },
+    {
+      "phrase": "commit 〔make〕 an error",
+      "headword": "commit"
+    },
+    {
+      "phrase": "compensate for",
+      "headword": "compensate"
+    },
+    {
+      "phrase": "comply with 〜 〜（",
+      "headword": "comply"
+    },
+    {
+      "phrase": "concentrate (a) on b （a",
+      "headword": "concentrate"
+    },
+    {
+      "phrase": "confine a to b a",
+      "headword": "confine"
+    },
+    {
+      "phrase": "consist in",
+      "headword": "consist"
+    },
+    {
+      "phrase": "consist of",
+      "headword": "consist"
+    },
+    {
+      "phrase": "contrary to",
+      "headword": "contrary"
+    },
+    {
+      "phrase": "contribute to",
+      "headword": "contribute"
+    },
+    {
+      "phrase": "cope with",
+      "headword": "cope"
+    },
+    {
+      "phrase": "coral reef",
+      "headword": "coral"
+    },
+    {
+      "phrase": "correspond with",
+      "headword": "correspond"
+    },
+    {
+      "phrase": "count for",
+      "headword": "count"
+    },
+    {
+      "phrase": "count on 〔upon〕",
+      "headword": "count"
+    },
+    {
+      "phrase": "crack up",
+      "headword": "crack"
+    },
+    {
+      "phrase": "cure a of b a",
+      "headword": "cure"
+    },
+    {
+      "phrase": "dawn on",
+      "headword": "dawn"
+    },
+    {
+      "phrase": "deal in 〜 〜（",
+      "headword": "deal"
+    },
+    {
+      "phrase": "deal with",
+      "headword": "deal"
+    },
+    {
+      "phrase": "decide on 〔upon〕",
+      "headword": "decide"
+    },
+    {
+      "phrase": "define a as b a",
+      "headword": "define"
+    },
+    {
+      "phrase": "depend on 〔upon〕",
+      "headword": "depend"
+    },
+    {
+      "phrase": "deprive a of",
+      "headword": "deprive"
+    },
+    {
+      "phrase": "deprive a of b a",
+      "headword": "deprive"
+    },
+    {
+      "phrase": "die down",
+      "headword": "die"
+    },
+    {
+      "phrase": "die from 〜 〜（",
+      "headword": "die"
+    },
+    {
+      "phrase": "die out",
+      "headword": "die"
+    },
+    {
+      "phrase": "differ from",
+      "headword": "differ"
+    },
+    {
+      "phrase": "dispense with",
+      "headword": "dispense"
+    },
+    {
+      "phrase": "dispose of",
+      "headword": "dispose"
+    },
+    {
+      "phrase": "distinguish a from b a",
+      "headword": "distinguish"
+    },
+    {
+      "phrase": "drag on",
+      "headword": "drag"
+    },
+    {
+      "phrase": "drop out of",
+      "headword": "drop"
+    },
+    {
+      "phrase": "due to",
+      "headword": "due"
+    },
+    {
+      "phrase": "dwell on 〔upon〕",
+      "headword": "dwell"
+    },
+    {
+      "phrase": "early on",
+      "headword": "early"
+    },
+    {
+      "phrase": "end up 〜 〔...ing〕",
+      "headword": "end"
+    },
+    {
+      "phrase": "engage in",
+      "headword": "engage"
+    },
+    {
+      "phrase": "enjoy oneself",
+      "headword": "enjoy"
+    },
+    {
+      "phrase": "enter into 〔on〕 〜 〜（",
+      "headword": "enter"
+    },
+    {
+      "phrase": "except for",
+      "headword": "except"
+    },
+    {
+      "phrase": "exchange a for b a",
+      "headword": "exchange"
+    },
+    {
+      "phrase": "face off",
+      "headword": "face"
+    },
+    {
+      "phrase": "fail in",
+      "headword": "fail"
+    },
+    {
+      "phrase": "fall apart",
+      "headword": "fall"
+    },
+    {
+      "phrase": "fall away",
+      "headword": "fall"
+    },
+    {
+      "phrase": "fall behind （〜） （",
+      "headword": "fall"
+    },
+    {
+      "phrase": "fall in love with",
+      "headword": "fall"
+    },
+    {
+      "phrase": "fall off",
+      "headword": "fall"
+    },
+    {
+      "phrase": "fall through",
+      "headword": "fall"
+    },
+    {
+      "phrase": "fall victim to",
+      "headword": "fall"
+    },
+    {
+      "phrase": "feed on",
+      "headword": "feed"
+    },
+    {
+      "phrase": "feel for",
+      "headword": "feel"
+    },
+    {
+      "phrase": "feel free to do ⾃",
+      "headword": "feel"
+    },
+    {
+      "phrase": "feel obliged to do",
+      "headword": "feel"
+    },
+    {
+      "phrase": "figure out",
+      "headword": "figure"
+    },
+    {
+      "phrase": "find fault with",
+      "headword": "find"
+    },
+    {
+      "phrase": "find out (about)",
+      "headword": "find"
+    },
+    {
+      "phrase": "first of all",
+      "headword": "first"
+    },
+    {
+      "phrase": "focus on",
+      "headword": "focus"
+    },
+    {
+      "phrase": "forgive a for b b（",
+      "headword": "forgive"
+    },
+    {
+      "phrase": "frown at",
+      "headword": "frown"
+    },
+    {
+      "phrase": "furnish a with b a",
+      "headword": "furnish"
+    },
+    {
+      "phrase": "get along (with 〜) （",
+      "headword": "get"
+    },
+    {
+      "phrase": "get angry",
+      "headword": "get"
+    },
+    {
+      "phrase": "get away with",
+      "headword": "get"
+    },
+    {
+      "phrase": "get by",
+      "headword": "get"
+    },
+    {
+      "phrase": "get down to",
+      "headword": "get"
+    },
+    {
+      "phrase": "get dressed",
+      "headword": "get"
+    },
+    {
+      "phrase": "get in contact with",
+      "headword": "get"
+    },
+    {
+      "phrase": "get in touch with",
+      "headword": "get"
+    },
+    {
+      "phrase": "get into",
+      "headword": "get"
+    },
+    {
+      "phrase": "get involved in 〔with〕",
+      "headword": "get"
+    },
+    {
+      "phrase": "get lost",
+      "headword": "get"
+    },
+    {
+      "phrase": "get married (to 〜) （",
+      "headword": "get"
+    },
+    {
+      "phrase": "get on",
+      "headword": "get"
+    },
+    {
+      "phrase": "get on one's nerves",
+      "headword": "get"
+    },
+    {
+      "phrase": "get on with",
+      "headword": "get"
+    },
+    {
+      "phrase": "get over",
+      "headword": "get"
+    },
+    {
+      "phrase": "get ready for",
+      "headword": "get"
+    },
+    {
+      "phrase": "get rid of",
+      "headword": "get"
+    },
+    {
+      "phrase": "get sick",
+      "headword": "get"
+    },
+    {
+      "phrase": "get the better of",
+      "headword": "get"
+    },
+    {
+      "phrase": "get through 〜 〜（",
+      "headword": "get"
+    },
+    {
+      "phrase": "get tired from 〔with〕",
+      "headword": "get"
+    },
+    {
+      "phrase": "get to",
+      "headword": "get"
+    },
+    {
+      "phrase": "get well",
+      "headword": "get"
+    },
+    {
+      "phrase": "give (⼈) a hand 〜(⼈)",
+      "headword": "give"
+    },
+    {
+      "phrase": "give a over to",
+      "headword": "give"
+    },
+    {
+      "phrase": "give away",
+      "headword": "give"
+    },
+    {
+      "phrase": "give birth to",
+      "headword": "give"
+    },
+    {
+      "phrase": "give in",
+      "headword": "give"
+    },
+    {
+      "phrase": "give in (to 〜) （",
+      "headword": "give"
+    },
+    {
+      "phrase": "give off 〜 〜（",
+      "headword": "give"
+    },
+    {
+      "phrase": "give out （〜） （",
+      "headword": "give"
+    },
+    {
+      "phrase": "give rise to",
+      "headword": "give"
+    },
+    {
+      "phrase": "give up",
+      "headword": "give"
+    },
+    {
+      "phrase": "give way (to 〜) （",
+      "headword": "give"
+    },
+    {
+      "phrase": "give 〜 a ride 〔lift〕",
+      "headword": "give"
+    },
+    {
+      "phrase": "give 〜 a try",
+      "headword": "give"
+    },
+    {
+      "phrase": "hang on",
+      "headword": "hang"
+    },
+    {
+      "phrase": "hang on (to 〜) （",
+      "headword": "hang"
+    },
+    {
+      "phrase": "have (a) good command of",
+      "headword": "have"
+    },
+    {
+      "phrase": "have access to",
+      "headword": "have"
+    },
+    {
+      "phrase": "have an impact〔 effect；influence〕 on",
+      "headword": "have"
+    },
+    {
+      "phrase": "have difficulty 〔trouble〕 (in) ...ing",
+      "headword": "have"
+    },
+    {
+      "phrase": "have fun",
+      "headword": "have"
+    },
+    {
+      "phrase": "have to",
+      "headword": "have"
+    },
+    {
+      "phrase": "have trouble (in) ...ing",
+      "headword": "have"
+    },
+    {
+      "phrase": "have 〔take〕 a look at",
+      "headword": "have"
+    },
+    {
+      "phrase": "have 〜 in mind",
+      "headword": "have"
+    },
+    {
+      "phrase": "have 〜 on one's mind",
+      "headword": "have"
+    },
+    {
+      "phrase": "head off",
+      "headword": "head"
+    },
+    {
+      "phrase": "head out",
+      "headword": "head"
+    },
+    {
+      "phrase": "hear from",
+      "headword": "hear"
+    },
+    {
+      "phrase": "hear of",
+      "headword": "hear"
+    },
+    {
+      "phrase": "help oneself to",
+      "headword": "help"
+    },
+    {
+      "phrase": "help 〜 with",
+      "headword": "help"
+    },
+    {
+      "phrase": "hit on 〔upon〕",
+      "headword": "hit"
+    },
+    {
+      "phrase": "hold back 〜 〜（",
+      "headword": "hold"
+    },
+    {
+      "phrase": "hold on",
+      "headword": "hold"
+    },
+    {
+      "phrase": "hold on to",
+      "headword": "hold"
+    },
+    {
+      "phrase": "hold one's breath",
+      "headword": "hold"
+    },
+    {
+      "phrase": "hold out",
+      "headword": "hold"
+    },
+    {
+      "phrase": "hold true 〔good〕",
+      "headword": "hold"
+    },
+    {
+      "phrase": "hope 〔wish〕 for",
+      "headword": "hope"
+    },
+    {
+      "phrase": "identify a with b a",
+      "headword": "identify"
+    },
+    {
+      "phrase": "impose a on b a",
+      "headword": "impose"
+    },
+    {
+      "phrase": "independent of",
+      "headword": "independent"
+    },
+    {
+      "phrase": "indulge in",
+      "headword": "indulge"
+    },
+    {
+      "phrase": "inquire into",
+      "headword": "inquire"
+    },
+    {
+      "phrase": "insist on 〔upon〕",
+      "headword": "insist"
+    },
+    {
+      "phrase": "instead of",
+      "headword": "instead"
+    },
+    {
+      "phrase": "interact with",
+      "headword": "interact"
+    },
+    {
+      "phrase": "interfere with",
+      "headword": "interfere"
+    },
+    {
+      "phrase": "keep ...ing",
+      "headword": "keep"
+    },
+    {
+      "phrase": "keep a waiting",
+      "headword": "keep"
+    },
+    {
+      "phrase": "keep at",
+      "headword": "keep"
+    },
+    {
+      "phrase": "keep away from",
+      "headword": "keep"
+    },
+    {
+      "phrase": "keep company with",
+      "headword": "keep"
+    },
+    {
+      "phrase": "keep in touch with",
+      "headword": "keep"
+    },
+    {
+      "phrase": "keep off",
+      "headword": "keep"
+    },
+    {
+      "phrase": "keep on ...ing",
+      "headword": "keep"
+    },
+    {
+      "phrase": "keep one's word 〔promise〕",
+      "headword": "keep"
+    },
+    {
+      "phrase": "keep pace with",
+      "headword": "keep"
+    },
+    {
+      "phrase": "keep to",
+      "headword": "keep"
+    },
+    {
+      "phrase": "keep track of",
+      "headword": "keep"
+    },
+    {
+      "phrase": "keep up with",
+      "headword": "keep"
+    },
+    {
+      "phrase": "keep 〔bear〕 〜 in mind",
+      "headword": "keep"
+    },
+    {
+      "phrase": "keep 〜 to oneself",
+      "headword": "keep"
+    },
+    {
+      "phrase": "last year",
+      "headword": "last"
+    },
+    {
+      "phrase": "later on",
+      "headword": "later"
+    },
+    {
+      "phrase": "lay off",
+      "headword": "lay"
+    },
+    {
+      "phrase": "lay out 〜 〜（",
+      "headword": "lay"
+    },
+    {
+      "phrase": "leave off",
+      "headword": "leave"
+    },
+    {
+      "phrase": "leave 〜 alone",
+      "headword": "leave"
+    },
+    {
+      "phrase": "let alone",
+      "headword": "let"
+    },
+    {
+      "phrase": "let down",
+      "headword": "let"
+    },
+    {
+      "phrase": "let go of",
+      "headword": "let"
+    },
+    {
+      "phrase": "lie in",
+      "headword": "lie"
+    },
+    {
+      "phrase": "limit a to b a",
+      "headword": "limit"
+    },
+    {
+      "phrase": "live for",
+      "headword": "live"
+    },
+    {
+      "phrase": "live on 〔upon〕",
+      "headword": "live"
+    },
+    {
+      "phrase": "live up to 〜 〜（",
+      "headword": "live"
+    },
+    {
+      "phrase": "lose one's temper",
+      "headword": "lose"
+    },
+    {
+      "phrase": "lose oneself in",
+      "headword": "lose"
+    },
+    {
+      "phrase": "lose sight of",
+      "headword": "lose"
+    },
+    {
+      "phrase": "major in",
+      "headword": "major"
+    },
+    {
+      "phrase": "many a 〔an〕",
+      "headword": "many"
+    },
+    {
+      "phrase": "mistake a for b a",
+      "headword": "mistake"
+    },
+    {
+      "phrase": "much 〔still〕 less 〜 （",
+      "headword": "much"
+    },
+    {
+      "phrase": "object to",
+      "headword": "object"
+    },
+    {
+      "phrase": "once (and) for all",
+      "headword": "once"
+    },
+    {
+      "phrase": "once in a while",
+      "headword": "once"
+    },
+    {
+      "phrase": "once upon a time",
+      "headword": "once"
+    },
+    {
+      "phrase": "owe a to b a",
+      "headword": "owe"
+    },
+    {
+      "phrase": "owing to",
+      "headword": "owing"
+    },
+    {
+      "phrase": "pack up",
+      "headword": "pack"
+    },
+    {
+      "phrase": "participate in",
+      "headword": "participate"
+    },
+    {
+      "phrase": "pay (a) for b b",
+      "headword": "pay"
+    },
+    {
+      "phrase": "pay attention to",
+      "headword": "pay"
+    },
+    {
+      "phrase": "pile up",
+      "headword": "pile"
+    },
+    {
+      "phrase": "plenty of",
+      "headword": "plenty"
+    },
+    {
+      "phrase": "prefer a to b b",
+      "headword": "prefer"
+    },
+    {
+      "phrase": "prepare for",
+      "headword": "prepare"
+    },
+    {
+      "phrase": "present a with b a",
+      "headword": "present"
+    },
+    {
+      "phrase": "present oneself",
+      "headword": "present"
+    },
+    {
+      "phrase": "prevent 〜 from ...ing",
+      "headword": "prevent"
+    },
+    {
+      "phrase": "prior to",
+      "headword": "prior"
+    },
+    {
+      "phrase": "provide for 〔against〕",
+      "headword": "provide"
+    },
+    {
+      "phrase": "pull back",
+      "headword": "pull"
+    },
+    {
+      "phrase": "pull one's leg （",
+      "headword": "pull"
+    },
+    {
+      "phrase": "pull up (〜) 〜（⾞）",
+      "headword": "pull"
+    },
+    {
+      "phrase": "punish a for b b",
+      "headword": "punish"
+    },
+    {
+      "phrase": "push one's way",
+      "headword": "push"
+    },
+    {
+      "phrase": "put (an) emphasis on",
+      "headword": "put"
+    },
+    {
+      "phrase": "put down",
+      "headword": "put"
+    },
+    {
+      "phrase": "put in 〜 〜（",
+      "headword": "put"
+    },
+    {
+      "phrase": "put off",
+      "headword": "put"
+    },
+    {
+      "phrase": "put on airs",
+      "headword": "put"
+    },
+    {
+      "phrase": "put on 〜 〜（cd",
+      "headword": "put"
+    },
+    {
+      "phrase": "put out 〜 〜（",
+      "headword": "put"
+    },
+    {
+      "phrase": "put together",
+      "headword": "put"
+    },
+    {
+      "phrase": "put up with",
+      "headword": "put"
+    },
+    {
+      "phrase": "put 〜 into 〔in〕 practice",
+      "headword": "put"
+    },
+    {
+      "phrase": "put 〜 to use",
+      "headword": "put"
+    },
+    {
+      "phrase": "quite a few",
+      "headword": "quite"
+    },
+    {
+      "phrase": "quite a little",
+      "headword": "quite"
+    },
+    {
+      "phrase": "read between the lines ⾏",
+      "headword": "read"
+    },
+    {
+      "phrase": "refer to",
+      "headword": "refer"
+    },
+    {
+      "phrase": "reflect upon 〔on〕",
+      "headword": "reflect"
+    },
+    {
+      "phrase": "refrain from",
+      "headword": "refrain"
+    },
+    {
+      "phrase": "regard a as b a",
+      "headword": "regard"
+    },
+    {
+      "phrase": "regardless of",
+      "headword": "regardless"
+    },
+    {
+      "phrase": "relieve a of b a",
+      "headword": "relieve"
+    },
+    {
+      "phrase": "remind a of b a",
+      "headword": "remind"
+    },
+    {
+      "phrase": "resort to",
+      "headword": "resort"
+    },
+    {
+      "phrase": "rest on 〔upon〕",
+      "headword": "rest"
+    },
+    {
+      "phrase": "result from",
+      "headword": "result"
+    },
+    {
+      "phrase": "result in",
+      "headword": "result"
+    },
+    {
+      "phrase": "right away",
+      "headword": "right"
+    },
+    {
+      "phrase": "right now 〔away；off〕",
+      "headword": "right"
+    },
+    {
+      "phrase": "rob a of b a",
+      "headword": "rob"
+    },
+    {
+      "phrase": "rule out",
+      "headword": "rule"
+    },
+    {
+      "phrase": "search for",
+      "headword": "search"
+    },
+    {
+      "phrase": "second to none",
+      "headword": "second"
+    },
+    {
+      "phrase": "see (to it) that",
+      "headword": "see"
+    },
+    {
+      "phrase": "see a as b a",
+      "headword": "see"
+    },
+    {
+      "phrase": "see a off",
+      "headword": "see"
+    },
+    {
+      "phrase": "see if",
+      "headword": "see"
+    },
+    {
+      "phrase": "see little〔much；nothing〕 of",
+      "headword": "see"
+    },
+    {
+      "phrase": "see off",
+      "headword": "see"
+    },
+    {
+      "phrase": "send for",
+      "headword": "send"
+    },
+    {
+      "phrase": "set about",
+      "headword": "set"
+    },
+    {
+      "phrase": "set in",
+      "headword": "set"
+    },
+    {
+      "phrase": "set in （",
+      "headword": "set"
+    },
+    {
+      "phrase": "set off",
+      "headword": "set"
+    },
+    {
+      "phrase": "set off (〜)",
+      "headword": "set"
+    },
+    {
+      "phrase": "set out (to do)",
+      "headword": "set"
+    },
+    {
+      "phrase": "set up",
+      "headword": "set"
+    },
+    {
+      "phrase": "set 〔put；lay〕 aside",
+      "headword": "set"
+    },
+    {
+      "phrase": "settle down",
+      "headword": "settle"
+    },
+    {
+      "phrase": "shake hands (with 〜) （",
+      "headword": "shake"
+    },
+    {
+      "phrase": "share a with b a",
+      "headword": "share"
+    },
+    {
+      "phrase": "short of",
+      "headword": "short"
+    },
+    {
+      "phrase": "show a around b a",
+      "headword": "show"
+    },
+    {
+      "phrase": "show off",
+      "headword": "show"
+    },
+    {
+      "phrase": "show up",
+      "headword": "show"
+    },
+    {
+      "phrase": "single out",
+      "headword": "single"
+    },
+    {
+      "phrase": "sit back",
+      "headword": "sit"
+    },
+    {
+      "phrase": "sit by",
+      "headword": "sit"
+    },
+    {
+      "phrase": "sit in",
+      "headword": "sit"
+    },
+    {
+      "phrase": "sit up",
+      "headword": "sit"
+    },
+    {
+      "phrase": "slip by",
+      "headword": "slip"
+    },
+    {
+      "phrase": "so far",
+      "headword": "so"
+    },
+    {
+      "phrase": "so to speak 〔say〕",
+      "headword": "so"
+    },
+    {
+      "phrase": "something of a",
+      "headword": "something"
+    },
+    {
+      "phrase": "speak out",
+      "headword": "speak"
+    },
+    {
+      "phrase": "speak well of",
+      "headword": "speak"
+    },
+    {
+      "phrase": "specialize in",
+      "headword": "specialize"
+    },
+    {
+      "phrase": "spend 〜 (in) ...ing 〜（",
+      "headword": "spend"
+    },
+    {
+      "phrase": "split up",
+      "headword": "split"
+    },
+    {
+      "phrase": "stand by",
+      "headword": "stand"
+    },
+    {
+      "phrase": "stand for",
+      "headword": "stand"
+    },
+    {
+      "phrase": "stand out ⽬⽴",
+      "headword": "stand"
+    },
+    {
+      "phrase": "stand up ⽴",
+      "headword": "stand"
+    },
+    {
+      "phrase": "stay away from",
+      "headword": "stay"
+    },
+    {
+      "phrase": "stay healthy",
+      "headword": "stay"
+    },
+    {
+      "phrase": "stay up",
+      "headword": "stay"
+    },
+    {
+      "phrase": "stay with",
+      "headword": "stay"
+    },
+    {
+      "phrase": "stick around",
+      "headword": "stick"
+    },
+    {
+      "phrase": "stick to 〜 〜（",
+      "headword": "stick"
+    },
+    {
+      "phrase": "strike a as b a",
+      "headword": "strike"
+    },
+    {
+      "phrase": "submit to",
+      "headword": "submit"
+    },
+    {
+      "phrase": "substitute a for b b",
+      "headword": "substitute"
+    },
+    {
+      "phrase": "succeed in",
+      "headword": "succeed"
+    },
+    {
+      "phrase": "such as",
+      "headword": "such"
+    },
+    {
+      "phrase": "suffer from",
+      "headword": "suffer"
+    },
+    {
+      "phrase": "sum up",
+      "headword": "sum"
+    },
+    {
+      "phrase": "supply a with b a",
+      "headword": "supply"
+    },
+    {
+      "phrase": "suspect a of b a",
+      "headword": "suspect"
+    },
+    {
+      "phrase": "sympathize with",
+      "headword": "sympathize"
+    },
+    {
+      "phrase": "take a as b a",
+      "headword": "take"
+    },
+    {
+      "phrase": "take a break",
+      "headword": "take"
+    },
+    {
+      "phrase": "take a chance 〔chances〕",
+      "headword": "take"
+    },
+    {
+      "phrase": "take a off",
+      "headword": "take"
+    },
+    {
+      "phrase": "take a picture",
+      "headword": "take"
+    },
+    {
+      "phrase": "take a to",
+      "headword": "take"
+    },
+    {
+      "phrase": "take account of",
+      "headword": "take"
+    },
+    {
+      "phrase": "take advantage of",
+      "headword": "take"
+    },
+    {
+      "phrase": "take after",
+      "headword": "take"
+    },
+    {
+      "phrase": "take care of",
+      "headword": "take"
+    },
+    {
+      "phrase": "take charge of",
+      "headword": "take"
+    },
+    {
+      "phrase": "take in",
+      "headword": "take"
+    },
+    {
+      "phrase": "take it easy",
+      "headword": "take"
+    },
+    {
+      "phrase": "take notes on",
+      "headword": "take"
+    },
+    {
+      "phrase": "take notice of",
+      "headword": "take"
+    },
+    {
+      "phrase": "take off",
+      "headword": "take"
+    },
+    {
+      "phrase": "take off (〜)",
+      "headword": "take"
+    },
+    {
+      "phrase": "take on",
+      "headword": "take"
+    },
+    {
+      "phrase": "take over",
+      "headword": "take"
+    },
+    {
+      "phrase": "take part in",
+      "headword": "take"
+    },
+    {
+      "phrase": "take place",
+      "headword": "take"
+    },
+    {
+      "phrase": "take pride in",
+      "headword": "take"
+    },
+    {
+      "phrase": "take the place of",
+      "headword": "take"
+    },
+    {
+      "phrase": "take the train",
+      "headword": "take"
+    },
+    {
+      "phrase": "take the trouble to do",
+      "headword": "take"
+    },
+    {
+      "phrase": "take to",
+      "headword": "take"
+    },
+    {
+      "phrase": "take up 〜 〜（",
+      "headword": "take"
+    },
+    {
+      "phrase": "take 〔have〕 pity on",
+      "headword": "take"
+    },
+    {
+      "phrase": "take 〜 into account 〔consideration〕",
+      "headword": "take"
+    },
+    {
+      "phrase": "talk a into doing",
+      "headword": "talk"
+    },
+    {
+      "phrase": "talk down to",
+      "headword": "talk"
+    },
+    {
+      "phrase": "tend to do",
+      "headword": "tend"
+    },
+    {
+      "phrase": "the number of 〜 （",
+      "headword": "the"
+    },
+    {
+      "phrase": "the other day",
+      "headword": "the"
+    },
+    {
+      "phrase": "the same",
+      "headword": "the"
+    },
+    {
+      "phrase": "tip over",
+      "headword": "tip"
+    },
+    {
+      "phrase": "transform a into b a",
+      "headword": "transform"
+    },
+    {
+      "phrase": "translate a into b a",
+      "headword": "translate"
+    },
+    {
+      "phrase": "try on",
+      "headword": "try"
+    },
+    {
+      "phrase": "try to do",
+      "headword": "try"
+    },
+    {
+      "phrase": "tune in",
+      "headword": "tune"
+    },
+    {
+      "phrase": "tune up",
+      "headword": "tune"
+    },
+    {
+      "phrase": "turn a deaf ear to",
+      "headword": "turn"
+    },
+    {
+      "phrase": "turn down",
+      "headword": "turn"
+    },
+    {
+      "phrase": "turn in",
+      "headword": "turn"
+    },
+    {
+      "phrase": "turn into",
+      "headword": "turn"
+    },
+    {
+      "phrase": "turn off 〜 〜（⽕・",
+      "headword": "turn"
+    },
+    {
+      "phrase": "turn on 〜 〜（⽕・",
+      "headword": "turn"
+    },
+    {
+      "phrase": "turn out",
+      "headword": "turn"
+    },
+    {
+      "phrase": "turn over",
+      "headword": "turn"
+    },
+    {
+      "phrase": "turn to",
+      "headword": "turn"
+    },
+    {
+      "phrase": "turn up",
+      "headword": "turn"
+    },
+    {
+      "phrase": "turn 〔hand 〕 in",
+      "headword": "turn"
+    },
+    {
+      "phrase": "vice versa",
+      "headword": "vice"
+    },
+    {
+      "phrase": "view a as b a",
+      "headword": "view"
+    },
+    {
+      "phrase": "wander off",
+      "headword": "wander"
+    },
+    {
+      "phrase": "watch one's step ⾜",
+      "headword": "watch"
+    },
+    {
+      "phrase": "watch out (for 〜) （",
+      "headword": "watch"
+    },
+    {
+      "phrase": "wear off",
+      "headword": "wear"
+    },
+    {
+      "phrase": "wear out",
+      "headword": "wear"
+    },
+    {
+      "phrase": "work on",
+      "headword": "work"
+    },
+    {
+      "phrase": "write down",
+      "headword": "write"
+    },
+    {
+      "phrase": "yearn 〔long〕 for",
+      "headword": "yearn"
+    },
+    {
+      "phrase": "yield to",
+      "headword": "yield"
+    }
+  ]
+}

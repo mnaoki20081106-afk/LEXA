@@ -23,48 +23,93 @@ scores each lemma per `vocab_scoring_algorithm.txt`.
 
 ```
 01_extract_reference_books.py   PDF -> data/interim/<book>.json (index, headword)
+01b_ocr_sparta3.py              SPARTA3 PDF (image-render + OCR) -> data/interim/sparta3.json
 02_normalize_and_merge.py       per-book jsons -> data/processed/merged_lemmas.json (cross-book dedup)
 03_score_vocab.py               merged lemmas -> data/processed/vocab_scored.json (0.0-10.0 difficulty)
+04_build_word_families.py       merged lemmas -> data/processed/word_families.json (Word Family groups,
+                                 phrase-to-headword attachment candidates -- REVIEW list, not authoritative)
+05_build_word_table.py          scored lemmas + families -> data/processed/vocab_master.json
+                                 (final Word-row skeleton: word_id, family fields, is_phrase,
+                                 difficulty, source books -- NO sense/gloss content, see its docstring)
 ```
 
 Run:
 ```
 pip install -r requirements.txt
+apt-get install -y tesseract-ocr tesseract-ocr-eng   # for 01b only
 python3 01_extract_reference_books.py --input-dir /path/to/reference_books --out-dir data/interim
+python3 01b_ocr_sparta3.py --pdf "/path/to/大学入試英単語 SPARTA3 一覧.pdf" --out-dir data/interim
 python3 02_normalize_and_merge.py
 python3 03_score_vocab.py
+python3 04_build_word_families.py
+python3 05_build_word_table.py
 ```
 
 ## Status (Phase A, this commit)
 
 Done:
-- Text extraction for 5 of 6 vocab-list PDFs (sisutan, target1900,
-  sokutan_hisshu, leap_basic, passtan_jun1kyu) + the phrase book (sokujukugo).
-- Cross-book lemma merge with duplicate detection (4,675 unique lemmas from
-  the 6 books in the reference run).
+- Text extraction for all 6 vocab-list PDFs (sisutan, target1900,
+  sokutan_hisshu, leap_basic, passtan_jun1kyu, sparta3) + the phrase book
+  (sokujukugo). SPARTA3 needed OCR (see `01b_ocr_sparta3.py` docstring for
+  why and how — its font has no text mapping at all, verified empirically,
+  and the initial straightforward OCR attempt silently mis-read most rows
+  until the table's grid lines were stripped out first).
+- Cross-book lemma merge with duplicate detection (5,255 unique lemmas from
+  the 7 books in the reference run).
 - vocab_scoring_algorithm.txt Step 1 (percentile baseline + 0.9 duplicate
   discount) and Step 3 (0-10 normalization).
+- Word Family grouping (card_ui_logic_spec.md §1.1/§4/§5) via suffix rules:
+  262 families / 279 derived words detected (e.g. respect → respectable).
+  **Spot-checked with a random sample and found real false positives**
+  (author→authority, pose→position, tend→tender — coincidental suffix
+  matches, not real derivations). `word_families.json` is a review worklist,
+  not an authoritative Word Family table — see `04_build_word_families.py`
+  docstring for why (basis 1 from the spec, "use the source book's own
+  structure," isn't answerable from flat "一覧" list PDFs — they carry no
+  section/heading markup at all, only basis 2 form-based rules are usable
+  here) and for the phrase→headword attachment heuristic (429 of 1,031
+  phrases flagged as candidates, same caveat).
+- `vocab_master.json`: final Word-row skeleton assembled from all of the
+  above (5,255 rows). Still has no Sense/gloss content — that's original
+  content to be authored later, out of pipeline scope by design.
 
 Deferred / TBD:
-1. **SPARTA3 PDF**: the font is subsetted with no ToUnicode CMap, so
-   `pdfplumber`/`pypdf` return only glyph IDs, not text. Needs a
-   render-to-image + OCR step (`pdf2image` + `pytesseract`, neither
-   installed in this environment yet). Not started.
-2. **Step 2 (入試特異性ブースト)**: needs the past-exam corpus. Located at
-   Google Drive `英単語LEXA/過去問.zip` — **2.7 GB, single zip, internal
-   folder structure not yet inspected** (downloading and unzipping a file
-   this size needs to happen deliberately, not as a side effect of a
-   text-extraction script — see project brief's own instruction not to
-   assume folder-naming conventions before looking). This is the next thing
-   to investigate before Step 2 can be written. Until then `boost_score_raw`
-   is hardcoded to `0.0` for every lemma (see `03_score_vocab.py` docstring);
-   the schema and downstream code are already shaped for it so no rework is
+1. **Step 2 (入試特異性ブースト)**: needs the past-exam corpus. Located at
+   Google Drive `英単語LEXA/過去問.zip` — **2.7 GB, single zip**. This
+   environment's network policy blocks direct connections to
+   `drive.google.com` outright (confirmed: proxy returns 403 on CONNECT),
+   and the Google Drive MCP tool only offers whole-file download as a
+   base64 string, which would try to inline ~3.6 GB of base64 text into
+   the session — not viable at any size, let alone this one. **This corpus
+   cannot be fetched or inspected from this environment as currently set
+   up.** Needs a decision from the project owner: e.g. re-share the corpus
+   as an already-unzipped Drive folder (so individual PDFs, each small, can
+   be listed and pulled one at a time — which is also what
+   `supplementary_design_spec.md` §4.1 already mandates: process one file
+   at a time, never load the whole corpus at once), or another distribution
+   channel this session can reach. Until resolved, `boost_score_raw` stays
+   hardcoded to `0.0` for every lemma (see `03_score_vocab.py` docstring);
+   schema and downstream code are already shaped for it so no rework is
    needed once real values exist.
-3. **Extraction coverage**: index-position regex parsing is heuristic, not a
-   real PDF-table parser. Spot-checked at ~75-95% coverage per book (e.g.
-   sisutan: 1,560 of ~2,027 headwords). Good enough for Phase A's percentile
-   baseline (missing entries just don't contribute a data point), but should
-   be tightened before this is treated as authoritative.
+2. **Known algorithm limitation, flagging rather than silently patching**:
+   `vocab_scoring_algorithm.txt` §3 Step 1 defines Base_Score purely as
+   average index-percentile across the books a lemma appears in, with no
+   per-book tier weight. This produces a visible distortion for SPARTA3
+   specifically, since it's categorized "発展" (advanced) rather than "基礎的"
+   (foundational) in the source material, yet its *internal* ordering is
+   still index-1-first. A word like "solicit" (SPARTA3 index #2) currently
+   scores as one of the *easiest* lemmas in the whole merged set purely
+   because it's early in an advanced-only book — clearly wrong. The spec as
+   written doesn't account for this, and I'm not silently inventing a
+   tier-weight correction since that's a real scoring-methodology choice,
+   not an implementation gap. Flagging for a decision (e.g. weight
+   基礎的-tier books higher than 発展-tier books when averaging percentiles).
+3. **Extraction coverage**: index-position regex/OCR parsing is heuristic,
+   not a real PDF-table parser. Spot-checked at ~75-98% coverage per book
+   (e.g. sisutan: 1,560 of ~2,027 headwords; sparta3 OCR: 948 of ~1,000).
+   Good enough for Phase A's percentile baseline (missing entries just
+   don't contribute a data point), but should be tightened before this is
+   treated as authoritative.
 4. **Lemmatization is a placeholder** (`02_normalize_and_merge.py`):
    lowercase + whitespace collapse only, no real morphological analyzer.
    Inflected-form variants across books (e.g. "arise" vs "arisen") will
