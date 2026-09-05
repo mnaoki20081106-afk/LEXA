@@ -1,0 +1,15 @@
+# Copyrighted source material (publisher vocab-book PDFs, past-exam PDFs) must
+# NEVER be committed to this repo. These are used only as local, ephemeral
+# inputs to the pipeline/ scripts (see pipeline/README.md).
+pipeline/data/raw/
+pipeline/data/interim/
+*.pdf
+
+# Xcode / build artifacts (project.yml + xcodegen generates these locally)
+ios/LEXA/LEXA.xcodeproj/
+ios/LEXA/build/
+ios/LEXA/DerivedData/
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
