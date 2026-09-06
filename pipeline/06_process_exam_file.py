@@ -122,7 +122,15 @@ def main():
         tmp_pdf.flush()
         pdf_path = Path(tmp_pdf.name)
 
-        text = extract_text_pdfplumber(pdf_path)
+        try:
+            text = extract_text_pdfplumber(pdf_path)
+        except Exception:
+            # A minority of real exam PDFs are malformed enough that pdfplumber's
+            # parser (pdfminer) raises rather than returning empty text (e.g.
+            # "Unexpected EOF"). OCR reads the same rendered page regardless of
+            # the underlying file's structural validity, so it's the correct
+            # fallback here -- same as the too-little-text case below.
+            text = ""
         alpha_len = len(re.sub(r"[^a-zA-Z]", "", text))
         used_ocr = False
         if alpha_len < MIN_TEXT_LEN_BEFORE_OCR:
