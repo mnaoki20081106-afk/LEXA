@@ -13,3 +13,7 @@ ios/LEXA/DerivedData/
 __pycache__/
 *.pyc
 .venv/
+
+# Throwaway scratch scripts and batch-run logs from Phase A2 corpus processing
+pipeline/scratch_*
+pipeline/*.log
