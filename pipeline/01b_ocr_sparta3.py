@@ -90,13 +90,20 @@ def main():
         all_entries.extend(right)
         print(f"[page {page_num + 1}/{len(doc)}] left={len(left)} right={len(right)}")
 
-    total = len(all_entries)
+    # total = max(index), NOT len(all_entries): OCR misses/misreads some rows
+    # (see the gap check below), so the count of recovered rows undercounts
+    # the book's real size. Using it as "total" lets a correctly-read
+    # high-index row's index/total percentile exceed 1.0. Same fix as
+    # 01_extract_reference_books.py -- see that script for the "underline"
+    # / sokutan_hisshu case this was first caught on.
+    total = max((i for i, _ in all_entries), default=0)
     out = args.out_dir / "sparta3.json"
     out.write_text(json.dumps(
         {"book_code": "sparta3", "total_entries": total,
          "entries": [{"index": i, "lemma_raw": w} for i, w in all_entries]},
         ensure_ascii=False, indent=2))
-    print(f"[ok] sparta3: {total} entries -> {out}")
+    print(f"[ok] sparta3: {len(all_entries)} recovered rows, "
+          f"total_entries (max index) {total} -> {out}")
 
     idxs = sorted(i for i, _ in all_entries)
     gaps = [i for i in range(1, idxs[-1] + 1) if i not in set(idxs)] if idxs else []

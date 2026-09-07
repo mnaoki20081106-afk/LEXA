@@ -138,13 +138,22 @@ def main():
             print(f"[skip] {book_code}: {pdf_path} not found")
             continue
         entries = extract_word_book(pdf_path)
-        total = len(entries)
+        # total = max(index), NOT len(entries): the two-column layout parse is
+        # lossy (some rows are missed per page), so the count of successfully
+        # parsed rows undercounts the book's real size. Using it as "total" for
+        # base_score's index/total percentile let index exceed total for
+        # later entries (e.g. "underline" at index 1769 with total=1655 in
+        # sokutan_hisshu, when the book's real last index is 1900) --
+        # producing a percentile > 1.0. max(index) reflects the book's true
+        # extent regardless of which rows the parser happened to miss.
+        total = max((i for i, _ in entries), default=0)
         out = args.out_dir / f"{book_code}.json"
         out.write_text(json.dumps(
             {"book_code": book_code, "total_entries": total,
              "entries": [{"index": i, "lemma_raw": w} for i, w in entries]},
             ensure_ascii=False, indent=2))
-        print(f"[ok] {book_code}: {total} entries -> {out}")
+        print(f"[ok] {book_code}: {len(entries)} parsed rows, "
+              f"total_entries (max index) {total} -> {out}")
 
     for book_code, rel_path in PHRASE_BOOK_FILES.items():
         pdf_path = resolve_path(args.input_dir, rel_path)
@@ -152,13 +161,14 @@ def main():
             print(f"[skip] {book_code}: {pdf_path} not found")
             continue
         entries = extract_phrase_book(pdf_path)
-        total = len(entries)
+        total = max((i for i, _ in entries), default=0)
         out = args.out_dir / f"{book_code}.json"
         out.write_text(json.dumps(
             {"book_code": book_code, "total_entries": total, "is_phrase_book": True,
              "entries": [{"index": i, "lemma_raw": w} for i, w in entries]},
             ensure_ascii=False, indent=2))
-        print(f"[ok] {book_code}: {total} entries -> {out}")
+        print(f"[ok] {book_code}: {len(entries)} parsed rows, "
+              f"total_entries (max index) {total} -> {out}")
 
     print("\n[deferred] sparta3: font has no text mapping, needs OCR pipeline (Phase A2)")
 
