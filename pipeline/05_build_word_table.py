@@ -14,26 +14,56 @@ number of foundational books") that is NOT specified anywhere in the
 attached specs — home_screen_design.md just says the deck exists, not which
 words populate it. Flagging rather than guessing a threshold.
 
+`required_for_school_ids` is now populated from the exam corpus
+(data/interim/exam_freq_*.json). IMPLEMENTATION DECISIONS (documented per
+the project's "no silent decisions" rule):
+  - school_id is the Japanese university name string as found in the exam
+    corpus (e.g. "慶應義塾大学") — there is no formal school_id scheme
+    defined anywhere in the specs yet, so the name is used as-is.
+  - Threshold: a lemma is "required" for a school if it appears in at least
+    2 distinct processed exam papers for that university (doc_freq >= 2),
+    not just 1. This follows project_overview.txt §11/§35's principle that
+    school-specific importance comes from *repeated* appearance across
+    years, not a single one-off occurrence. Adjust REQUIRED_DOC_FREQ below
+    if a different threshold is wanted.
+
 Usage:
     python3 05_build_word_table.py \
         --scored data/processed/vocab_scored.json \
         --families data/processed/word_families.json \
+        --exam-freq-dir data/interim \
         --out data/processed/vocab_master.json
 """
 import argparse
 import json
 from pathlib import Path
 
+REQUIRED_DOC_FREQ = 2  # see docstring "IMPLEMENTATION DECISIONS"
+
+
+def load_school_ids_by_lemma(exam_freq_dir: Path) -> dict:
+    """Returns {lemma: [school_id, ...]} from every tier's exam_freq_*.json."""
+    by_lemma: dict[str, list[str]] = {}
+    for fp in sorted(exam_freq_dir.glob("exam_freq_*.json")):
+        tier = json.loads(fp.read_text())
+        for uni, info in tier.get("universities", {}).items():
+            for lemma, count in info.get("doc_freq", {}).items():
+                if count >= REQUIRED_DOC_FREQ:
+                    by_lemma.setdefault(lemma, []).append(uni)
+    return by_lemma
+
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--scored", default=Path("data/processed/vocab_scored.json"), type=Path)
     ap.add_argument("--families", default=Path("data/processed/word_families.json"), type=Path)
+    ap.add_argument("--exam-freq-dir", default=Path("data/interim"), type=Path)
     ap.add_argument("--out", default=Path("data/processed/vocab_master.json"), type=Path)
     args = ap.parse_args()
 
     scored = json.loads(args.scored.read_text())["lemmas"]
     fam_data = json.loads(args.families.read_text())
+    school_ids_by_lemma = load_school_ids_by_lemma(args.exam_freq_dir)
 
     family_of_lemma: dict[str, str] = {}
     family_role: dict[str, str] = {}
@@ -59,10 +89,10 @@ def main():
             "family_of_lemma": family_of_lemma.get(lemma) if family_role.get(lemma) == "derived" else None,
             "difficulty_level": entry["difficulty_level"],
             "base_score_raw": entry["base_score_raw"],
-            "boost_score_raw": entry["boost_score_raw"],  # always 0.0 in Phase A, see 03_score_vocab.py
+            "boost_score_raw": entry["boost_score_raw"],  # past-exam TF-IDF boost, see 03_score_vocab.py
             "reference_book_codes": sorted(entry["sources"].keys()),
             "required_for_common_test": False,  # TBD, see docstring
-            "required_for_school_ids": [],       # populated in Phase A2/B once school vocab sets exist
+            "required_for_school_ids": sorted(school_ids_by_lemma.get(lemma, [])),
         })
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
@@ -71,6 +101,9 @@ def main():
     families_used = sum(1 for w in words if w["family_id"])
     print(f"[ok] {families_used} words carry a family_id "
           f"({fam_data['family_count']} families, {fam_data['derived_word_count']} derived)")
+    with_schools = sum(1 for w in words if w["required_for_school_ids"])
+    print(f"[ok] {with_schools} words carry >=1 required_for_school_ids "
+          f"(threshold: doc_freq >= {REQUIRED_DOC_FREQ} per school)")
 
 
 if __name__ == "__main__":
