@@ -1,8 +1,9 @@
 """
-Phase A2 candidate triage, step 1 of N: rough first pass over the 36,507
-exam-only words (open-vocabulary exam corpus words absent from all 7
-reference books, see 07_reprocess_exam_corpus_open_vocab.py) per LO's
-instruction: drop words easier than the reference books' "基礎" tier
+Phase A2 candidate triage, step 2 of N (runs AFTER 08_lemmatize_exam_corpus.py
+merges inflectional surface forms): rough pass over the resulting exam-only
+lemmas (open-vocabulary exam corpus words absent from all 7 reference
+books, see 07_reprocess_exam_corpus_open_vocab.py) per LO's instruction:
+drop words easier than the reference books' "基礎" tier
 (e.g. have/make/like -- taught at junior-high level), UNLESS the word is
 already present in one of the 基礎 books (sisutan/target1900/
 sokutan_hisshu/leap_basic) under a different sense/position -- those stay,
