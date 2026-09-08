@@ -45,21 +45,35 @@ NOT DONE HERE (explicitly out of scope, flag rather than silently skip):
     free text is a much harder NLP problem and wasn't asked for here
     ("単語も全部抽出して" = extract all the WORDS).
 
-PER-FILE TOKEN CACHE (new, to avoid ever needing a THIRD full re-OCR pass):
-for every processed file, this also writes a small bag-of-words file under
+PER-FILE TOKEN CACHE + FULL TEXT (revised per LO's explicit instruction):
+for every processed file, this writes a bag-of-words file under
 data/interim/exam_tokens/<tier>/<safe-title>.json: {university, year, title,
-used_ocr, token_freq: {word: count}}. This is a word-frequency count, not
-the original document text or wording -- same "numeric derivative, not a
-reproduction" copyright reasoning 01_extract_reference_books.py already
-uses for reference-book data. If extraction/filtering logic needs to change
-again later (e.g. once a real lemmatizer is available), it can re-aggregate
-from these caches instead of re-running OCR on thousands of PDFs again.
+used_ocr, token_freq: {word: count}}, AND -- as of this revision -- the
+full extracted text under data/interim/exam_text/<tier>/<safe-title>.txt.
 
-RESUMABLE: safe to interrupt and re-run. Skips any title already present in
-the target tier's --agg-out files_processed list AND already cached under
-exam_tokens/. Processes strictly one file at a time (same OCR-safety
-constraint as 06_process_exam_file.py / the incident that motivated it --
-never parallelize this).
+Earlier versions of this script deliberately discarded the extracted text
+after counting (see 06_process_exam_file.py's docstring), on the reasoning
+that only a numeric derivative (word counts), not the original wording,
+should ever leave the temp file. That turned out to be too aggressive: it
+made two later refinements impossible for lack of any context --
+POS-aware lemmatization (08_lemmatize_exam_corpus.py had to fall back to a
+context-free heuristic) and, concretely, telling apart a junior-high sense
+of a word from a distinct, more advanced sense (e.g. "fine" = "元気な" at
+junior-high level vs. "罰金" as a noun -- a real case LO raised; without
+the surrounding sentence there is no way to tell which occurrence is
+which). LO's explicit instruction: stop discarding the text; save it
+instead. This is a full-corpus re-run (3rd OCR pass) specifically to
+capture it -- see RESUMABLE below for why cached token_freq alone couldn't
+just be reused this time.
+
+RESUMABLE: safe to interrupt and re-run. A file only counts as "already
+done" once BOTH its token_freq cache AND its saved text file exist -- on
+this run that means every file gets reprocessed once (the token_freq
+caches already existed from the previous run, but none of the text files
+do yet), after which future interruptions resume cleanly. Processes
+strictly one file at a time (same OCR-safety constraint as
+06_process_exam_file.py / the incident that motivated it -- never
+parallelize this).
 
 Usage:
     python3 07_reprocess_exam_corpus_open_vocab.py \
@@ -163,7 +177,7 @@ def extract_open_vocab(text: str, multiword_lemmas: list) -> dict:
     return counts
 
 
-def process_one(title: str, entry: dict, multiword_lemmas: list, tokens_dir: Path) -> dict:
+def process_one(title: str, entry: dict, multiword_lemmas: list, tokens_dir: Path, text_dir: Path) -> dict:
     cached_path = Path(entry["cached_file"])
     result = json.loads(cached_path.read_text())
     raw_bytes = base64.b64decode(result["content"])
@@ -193,13 +207,18 @@ def process_one(title: str, entry: dict, multiword_lemmas: list, tokens_dir: Pat
         "used_ocr": used_ocr, "token_freq": token_freq,
     }, ensure_ascii=False, indent=2))
 
+    tier_text_dir = text_dir / tier_code
+    tier_text_dir.mkdir(parents=True, exist_ok=True)
+    (tier_text_dir / f"{safe_filename(title)}.txt").write_text(text)
+
     return {"tier_code": tier_code, "university": entry["university"],
             "year": entry["year"], "title": title, "used_ocr": used_ocr,
             "token_freq": token_freq}
 
 
-def already_done(title: str, tier_code: str, tokens_dir: Path) -> bool:
-    return (tokens_dir / tier_code / f"{safe_filename(title)}.json").exists()
+def already_done(title: str, tier_code: str, tokens_dir: Path, text_dir: Path) -> bool:
+    return ((tokens_dir / tier_code / f"{safe_filename(title)}.json").exists()
+            and (text_dir / tier_code / f"{safe_filename(title)}.txt").exists())
 
 
 def main():
@@ -207,6 +226,7 @@ def main():
     ap.add_argument("--title-map", default=Path("data/interim/_title_to_cache_map.json"), type=Path)
     ap.add_argument("--lemma-list", default=Path("data/processed/lemma_list.txt"), type=Path)
     ap.add_argument("--tokens-dir", default=Path("data/interim/exam_tokens"), type=Path)
+    ap.add_argument("--text-dir", default=Path("data/interim/exam_text"), type=Path)
     ap.add_argument("--agg-dir", default=Path("data/interim"), type=Path)
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--only-tier", default=None, help="e.g. march, kyuutei")
@@ -221,7 +241,7 @@ def main():
                  if TIER_FILE_TO_CODE[Path(e["tier_file"]).name] == args.only_tier]
 
     todo = [(t, e) for t, e in items
-            if not already_done(t, TIER_FILE_TO_CODE[Path(e["tier_file"]).name], args.tokens_dir)]
+            if not already_done(t, TIER_FILE_TO_CODE[Path(e["tier_file"]).name], args.tokens_dir, args.text_dir)]
     print(f"[ok] {len(items)} total, {len(items) - len(todo)} already cached, {len(todo)} remaining")
 
     if args.limit:
@@ -229,7 +249,7 @@ def main():
 
     for i, (title, entry) in enumerate(todo, start=1):
         try:
-            r = process_one(title, entry, multiword_lemmas, args.tokens_dir)
+            r = process_one(title, entry, multiword_lemmas, args.tokens_dir, args.text_dir)
         except Exception as e:
             print(f"[error] {i}/{len(todo)} {title}: {e}")
             continue
