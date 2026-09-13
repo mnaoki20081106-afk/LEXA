@@ -42,3 +42,45 @@ STEP5判定バッチが `university_groups.<group>.relevance` を決める際の
   （学部データがなく大学単体の教育的意味付けが弱いため）。ただし
   `per_university_frequency`は事実としてそのまま保持し、将来大学単位の
   relevance生成に使えるようにする。
+
+## reference_coverage の閾値（v2で追加、Tier Bパイロットの指摘を受けて明文化）
+`book_count`（在籍する参考書の冊数、7冊中）を以下で判定する。
+- `FULLY_COVERED`: book_count >= 3
+- `PARTIALLY_COVERED`: book_count == 1 または 2
+- `NOT_COVERED`: book_count == 0
+- `UNCERTAIN`: 上記に当てはまらない特殊ケース（基本的に発生しない想定）
+この閾値はSTEP4-2済み語・未済み語の両方に共通して適用する。
+
+## final_role 集約ロジック（v2で追加、Tier B用の明示的な集約式）
+sense単位評価がない（Tier B）場合、lemma単位のfinal_roleは以下の優先順位で決定する。
+1. `is_function_word` / `is_noise_fragment` / `is_phrase` のいずれかがtrue
+   → `EXCLUDE_FROM_LEARNING`（他の基準より優先）
+2. 以下の「広範重要」条件を**すべて**満たす → `CORE`
+   - `total_frequency`が候補母集団の上位1割程度に相当する高水準
+   - `university_count`が26,737語population全体で見て極めて高い（目安：25以上）
+   - 出現する大学群のうち過半数で`relevance=HIGH`
+   - 事実が強く一貫している（`confidence: high`を正当化できる）
+3. 2に届かないが、出現する大学群のうち相当数（目安：半数以上）で
+   `relevance=HIGH`または`MEDIUM` → `IMPORTANT`
+4. 特定の1〜2大学群のみで`relevance=HIGH`、または`concentration_ratio>=0.8`の
+   集中パターンが見られる → `TARGET`
+5. 大学群のrelevanceがおおむね`LOW`〜`MEDIUM`混在で、決め手となる強いシグナルが
+   ない（Tier Bでsense情報がなく判断材料が薄いケースを含む） → `CONTEXT`
+6. `total_frequency`が極端に低い（目安：5以下）、出現大学数が1〜2校のみで
+   継続的出現とは言えない → `ARCHIVE`
+この優先順位はあくまで出発点であり、事実が強く矛盾する場合は`reason`に
+明記した上で調整してよい（機械的閾値だけに縛られる必要はない、という
+STEP5全体の方針は維持する）。
+
+## 固有名詞・不明語の扱い（v2で追加）
+Tier Bでは大量の未知語・固有名詞候補が出現しうる。sense分析がないため
+断定的な判断はできないが、以下の優先順位で扱う。
+1. 明らかな固有名詞（地名・人名として一般常識で判断できる、例: Brazil, John）
+   → `learner_category: proper_noun`, `final_role: EXCLUDE_FROM_LEARNING`
+2. 実在するが特定困難、またはOCR起因の疑いはあるが`is_noise_fragment`が
+   upstreamでfalseのため断定できない語 → `learner_category: other`,
+   `confidence: low`とし、`reason`に疑念を明記した上で`final_role`は
+   通常のfact-basedロジック（上記集約ロジック）に従って決定する
+   （`ocr_fragment`と断定しない — sense根拠なしにその診断はできない）
+3. 完全に判別不能な文字列 → `learner_category: other`, `final_role: ARCHIVE`,
+   `confidence: low`とし、`reason`に判別不能である旨を明記する
