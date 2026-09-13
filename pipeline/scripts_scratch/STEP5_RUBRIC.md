@@ -1,4 +1,4 @@
-# STEP5 target_relevance 判定ルーブリック (v3)
+# STEP5 target_relevance 判定ルーブリック (v3.1)
 
 STEP5判定バッチが `university_groups.<group>.relevance` を決める際の出発点。
 完全な機械的閾値ではなく、STEP4-2 sense情報・reference_book情報を踏まえた
@@ -90,7 +90,19 @@ final_roleは「1つの大学群がHIGHだから自動的に上位roleにする�
 以下を **すべて** 満たす場合のみ:
 - `exam_necessity = HIGH`（複数大学群にまたがる一貫した高頻度・高カバレッジ。
   1つの大学群だけがHIGHでも他が軒並みLOW/データなしならHIGHにしない）
-- 出現する大学群のうち**過半数**で`relevance = HIGH`（特定1〜2グループの偏りではない）
+- **出現グループ数の下限とHIGH比率の定義（v3.1で明文化）**:
+  - `n`をそのlemmaが実際に出現した（frequency>0の）大学グループ数とする。
+  - `n >= 3`の場合に限り、「出現グループのうちHIGHの数 / n >= 0.5（過半数）」を
+    CORE昇格条件の1つとして使用してよい。分母`n`は必ず「そのlemmaが実際に出現した
+    グループ数」であり、7グループ全体や候補グループ数など他の数を分母にしない。
+  - `n <= 2`の場合、HIGH比率だけを根拠にCOREへ昇格させてはならない
+    （例：出現グループが2つで両方HIGHでも、比率100%だけではCORE化しない。
+    出現範囲自体が狭いため、この場合は通常IMPORTANTかTARGETに留める。他の強い
+    根拠（exam_necessity=HIGHを裏付ける総頻度・大学数の厚みなど）がある場合のみ、
+    reasonに明記した上で例外的にCOREを検討してよい）。
+  - group-level relevance（HIGH/MEDIUM/LOW）自体は本ルーブリック冒頭の「判定ロジック」
+    セクションの既存の閾値判定結果をそのまま利用する。CORE判定のために新たな
+    意味分析・再解釈を行わない。
 - `overall_learning_value = HIGH`
 - 事実が一貫しており、`confidence: high`を正当化できる
 「全国的に必要な語」「幅広い大学群で必要な語」はこの区分に該当する。
@@ -105,9 +117,18 @@ CORE の基準に届かないが、以下のいずれかを満たす:
 以下のような「広くはないが特定文脈で強い」パターン:
 - 出現する大学群の**一部（1〜2グループ）でのみ**`relevance = HIGH`、かつ他グループでは
   データが薄い/存在しない、または
-- `concentration_ratio`が高く（目安0.8以上）、かつ意味のある頻度（目安：総頻度6以上。
-  単発出現（total_frequency=1程度）で機械的に concentration_ratio=1.0 になるだけの
-  ケースは「集中パターン」に含めない）がある場合
+- `concentration_ratio`が高く（目安0.8以上）、かつ**その大学群「内」でのfrequency**
+  （`group_frequency.<group>.frequency`。lemma全体のtotal_frequencyではない）が
+  意味のある水準（目安：グループ内frequency 6以上）にある場合。
+
+  **【曖昧さ排除のための明記（v3.1）】** ここでの「頻度6以上」は、常に
+  「TARGET判定の根拠として使っているその特定の大学グループ内でのfrequency」を指し、
+  lemma全体のtotal_frequencyを指すものでは **ない**。したがって、複数の大学群に
+  それぞれ薄く（各グループ内frequencyが低いまま）出現しているだけの語は、
+  それらを合算したlemma全体のtotal_frequencyがたまたま6以上になったとしても、
+  この条件だけを根拠にTARGETへ分類してはならない。単発出現
+  （あるグループ内でのfrequency=1程度）で機械的に`concentration_ratio=1.0`になる
+  だけのケースも同様に「集中パターン」に含めない。
 「特定大学群に強く必要な語」「頻度は低いが特定大学で意味がある語」はここに入る。
 exam_necessityはLOW〜MEDIUMでも構わない（全国的な必要性は低くても、特定ターゲット校を
 選ぶ学習者には重要、というLEXAの目的に合致するroleのため）。
@@ -165,6 +186,43 @@ Tier B（21,539語、sense分析未実施）では大量の未知語・固有名
 - 判断に十分な根拠がない場合は、無理に`known_lexical_item`や`proper_noun`に
   分類せず、`uncertain_lexical_item`として「不明」であることを明示的に保持する。
   この場合、confidenceは`low`とし、reasonにその旨を明記する。
+
+### learner_category と final_role の境界（v3.1で明文化）
+
+`learner_category`の4値（likely_ocr_artifact / proper_noun / known_lexical_item /
+uncertain_lexical_item）は、**final_roleを直接一意に決定するものではない**。
+あくまでfinal_role判定に対する「ゲート（一部の値は特定roleを強制的に禁止/許可する）」
+または「補助情報（他の事実と組み合わせて判断材料にする）」として扱う。
+
+基本方針は以下の通り:
+
+- **likely_ocr_artifact**: 学習対象から除外する強い根拠となる。ただし、この値自体が
+  upstreamの`is_noise_fragment`等、既存の機械判定を根拠として初めて成立するものであり
+  （上記の通り、機械的裏付けなしにこの値を割り当てること自体が禁止）、
+  この値が確定している場合はfinal_roleとして通常ARCHIVE（またはEXCLUDE_FROM_LEARNING、
+  is_function_word等の他フラグも併存する場合）に倒してよい。
+- **proper_noun**: 通常の英単語学習対象から外す候補ではあるが、**機械的に
+  EXCLUDE_FROM_LEARNINGへ直結させる値ではない**。この値自体が「普通名詞・一般語として
+  実在する用法が確認できない、一般常識で明らかな固有名詞」の場合のみ成立するものであり
+  （上記の通り、判断に迷う語＝普通名詞用法がありうる語には、そもそもこの値を割り当てない）、
+  その意味で確定した`proper_noun`はfinal_role: EXCLUDE_FROM_LEARNINGのゲート条件の1つとして
+  機能する。
+- **known_lexical_item**: 実在する語として確認できるため、learner_category自体は
+  final_roleを制約しない。通常のlearning-value評価（exam_necessity・
+  overall_learning_value・target_relevanceの事実）だけに基づいてfinal_roleを決定する。
+- **uncertain_lexical_item**: 語の実在性・一般語としての扱いに不確実性があるため、
+  原則としてfinal_roleはARCHIVE寄りに倒す（上記ARCHIVEセクション参照）。ただし、
+  入試での出現事実（頻度・大学数・大学群での分布）が十分に確認でき、単なる希薄な
+  出現ではないと判断できる場合は、CONTEXT等のより積極的な扱いを許容する
+  （EXCLUDE_FROM_LEARNINGやTARGET/IMPORTANT/COREのような積極的な上位roleへは、
+  よほど強い事実的根拠がない限り進めない）。
+
+判定時の共通ルール:
+- 「知らない語だから`proper_noun`/`uncertain_lexical_item`にする」という判断は禁止。
+  evaluator個人の一般知識だけで断定せず、まず既存データ（is_noise_fragment等の
+  機械判定属性）・入試出現事実（頻度・大学数・大学群分布）を優先して判断すること。
+  一般知識は「実在する語かどうか」を確認する補助としてのみ使い、それだけで
+  learner_categoryやfinal_roleを断定する根拠にはしない。
 
 ## confidenceの扱い（v3で新規追加、明文化）
 
